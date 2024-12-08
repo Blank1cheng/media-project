@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片滚动展示</title>
+    <style>
+        .gallery-container {
+            width: 100%;
+            overflow-x: auto;
+            white-space: nowrap;
+            padding: 20px 0;
+            /* 自定义滚动条样式 */
+            scrollbar-width: thin;
+            scrollbar-color: #888 #f1f1f1;
+        }
+
+        .gallery-container::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .gallery-container::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        .gallery-container::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+
+        .gallery-container img {
+            width: 300px;  /* 设置统一的宽度 */
+            height: 200px; /* 设置统一的高度 */
+            object-fit: cover; /* 保持图片比例并填充指定区域 */
+            margin-right: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .audio-section {
+            margin-top: 20px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery-container">
+        <img src="./image.jpg" alt="图片1">
+        <img src="./image2.jpg" alt="图片2">
+    </div>
+
+    <div class="audio-section">
+        <h3>播放音频</h3>
+        <!-- 在这里添加音频播放器代码 -->
+    </div>
+</body>
+</html>
